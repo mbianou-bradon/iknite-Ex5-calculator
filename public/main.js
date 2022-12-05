@@ -3,12 +3,21 @@ class Computation {
     constructor (previousOperation, currentOperation){
         this.previousOperation = previousOperation;
         this.currentOperation = currentOperation;
+        this.default()
     }
 
+default(){
+    previousOperation.innerText = '0'
+    currentOperation.innerText = '0'
+}
+
   updateDisplay(value){
-    if (previousOperation.innerText.includes('.')) return 
+    if (previousOperation.innerText === '0')
+         previousOperation.innerText = value.toString()
+    else 
     previousOperation.innerText = previousOperation.innerText.toString() + value.toString()
    // currentOperation.innerText = currentOperation.innerText.toString() + value.toString()
+
   }
 
   delete(){
