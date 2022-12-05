@@ -1,0 +1,23 @@
+{
+  "name": "iknite-ex5-calculator",
+  "version": "1.0.0",
+  "description": "Basic web calculator implemented using HTML, CSS (tailwind) and Javascript",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./public/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbianou-bradon/iknite-Ex5-calculator.git"
+  },
+  "author": "Mbianou Bradon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbianou-bradon/iknite-Ex5-calculator/issues"
+  },
+  "homepage": "https://github.com/mbianou-bradon/iknite-Ex5-calculator#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "tailwindcss": "^3.2.4"
+  }
+}
