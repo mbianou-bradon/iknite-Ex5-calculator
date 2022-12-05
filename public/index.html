@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="./main.css">
     <title>Calculator</title>
 </head>
-<body>
-    <main class="flex place-content-center mt-10">
-        <div class="bg-black text-[#3651c4] font-extrabold rounded-3xl overflow-hidden">
+<body class="container mx-auto">
+    <main class="flex justify-center items-center h-[100vh] mx-3">
+        <div class="bg-black text-[#3651c4] place-self-center my-auto  font-extrabold rounded-3xl overflow-hidden">
+
             <div class="output flex flex-col items-end justify-around p-3 gap-2 bg-slate-900">
                 <div class="previous-operation font-semibold">7x140</div>
                 <div class="current-operation text-4xl">980</div>
             </div>
 
-            <div class="flex items-center justify-center max-h-min px-3">
-                <div class="special-operations grid grid-cols-2 py-5">
+            <div class="flex items-center justify-center gap-1 max-h-min px-3">
+                <div class="special-operations md:grid grid-cols-2 py-5 text-sm hidden">
 
                     <button>sin</button>
                     <button>ln</button>
@@ -31,33 +32,32 @@
 
                 </div>
 
-                <div class="number grid grid-cols-3 text-2xl">
+                <div class="number grid grid-cols-3 grid-rows-4 md:text-2xl">
 
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>0</button>
-                    <button>.</button>
+                    <button class="number">7</button>
+                    <button class="number">8</button>
+                    <button class="number">9</button>
+                    <button class="number">4</button>
+                    <button class="number">5</button>
+                    <button class="number">6</button>
+                    <button class="number">1</button>
+                    <button class="number">2</button>
+                    <button class="number">3</button>
+                    <button class="number">0</button>
+                    <button class="number">.</button>
                     <button>DEL</button>
 
                 </div>
 
-                <div class="basic-operations grid grid-cols-2">
+                <div class="basic-operations grid grid-cols-2 grid-rows-4 text-lg">
 
                     <button>÷</button>
                     <button>(</button>
                     <button>x</button>
                     <button>)</button>
                     <button>-</button>
-                    <button>=</button>
-                    <button class="grid">+</button>
-                
+                    <button>+</button>
+                    <button class="equal col-span-2 row-start-4 row-end-4 bg-red-600">=</button>
                 </div>
             </div>
         </div>
