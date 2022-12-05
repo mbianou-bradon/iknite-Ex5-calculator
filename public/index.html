@@ -8,16 +8,16 @@
     <title>Calculator</title>
 </head>
 <body class="container mx-auto bg-slate-400">
-    <main class="flex justify-center items-center h-[100vh] mx-3">
-        <div class="bg-black text-[#3651c4] place-self-center my-auto  font-extrabold rounded-3xl overflow-hidden">
+    <main class="flex justify-center items-center h-[100vh] ">
+        <div class="bg-black text-[#3651c4] place-self-center w-full md:max-w-xl  font-extrabold rounded-3xl overflow-hidden">
 
-            <div class="output flex flex-col items-end justify-around p-3 gap-2 bg-slate-900">
-                <div data-previous-operation class="font-semibold">7x140</div>
-                <div data-current-operation  class="text-4xl">980</div>
+            <div class="output flex flex-col items-end justify-around h-20 p-3 gap-2 bg-slate-900 break-words overflow-hidden">
+                <div id="previous-operation" class="previous-operant font-semibold"></div>
+                <div id="current-operation"  class="current-operant text-4xl break-words"></div>
             </div>
 
-            <div class="flex items-center justify-center gap-1 max-h-min px-3">
-                <div class="special-operations md:grid grid-cols-2 py-5 text-sm hidden">
+            <div class="flex items-center justify-center md:gap-1 md:px-3">
+                <div class="special-operations grid grid-cols-2 py-5 text-sm">
 
                     <button>sin</button>
                     <button>ln</button>
