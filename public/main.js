@@ -12,12 +12,14 @@ default(){
 }
 
   updateDisplay(value){
+   
     if (previousOperation.innerText === '0')
          previousOperation.innerText = value.toString()
     else 
     previousOperation.innerText = previousOperation.innerText.toString() + value.toString()
    // currentOperation.innerText = currentOperation.innerText.toString() + value.toString()
 
+   
   }
 
   delete(){
@@ -26,6 +28,20 @@ default(){
     
   }
 
+  result(){
+    let result = previousOperation.innerText.split('')
+    let cleanResult = result.map(number => {
+        if (number === 'x'){
+          return '*'
+        }
+        if(number === '÷') return '/'
+        else return number;    
+        
+    });
+    result = cleanResult.join('')
+    //console.log(eval(result))
+    currentOperation.innerText = eval(result)
+  }
     
 }
 
@@ -66,4 +82,8 @@ operation.forEach(button =>{
 deleteButton.addEventListener ('click', ()=> {
     computation.delete()
     //computation.updateDisplay()
+})
+
+equal.addEventListener('click', ()=>{
+    computation.result()
 })
