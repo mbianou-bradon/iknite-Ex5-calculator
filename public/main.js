@@ -3,10 +3,10 @@ class Computation {
     constructor (previousOperation, currentOperation){
         this.previousOperation = previousOperation;
         this.currentOperation = currentOperation;
-        this.default()
+        this.clear()
     }
 
-default(){
+  clear(){
     previousOperation.innerText = '0'
     currentOperation.innerText = '0'
 }
@@ -50,6 +50,7 @@ default(){
 const numbers = document.querySelectorAll('[data-number]')
 const deleteButton = document.getElementById('delete')
 const equal = document.getElementById('equal')
+const clear = document.getElementById('clear')
 const operation = document.querySelectorAll('[data-operation]')
 const previousOperation = document.getElementById('previous-operation')
 const currentOperation= document.getElementById('current-operation')
@@ -86,4 +87,8 @@ deleteButton.addEventListener ('click', ()=> {
 
 equal.addEventListener('click', ()=>{
     computation.result()
+})
+
+clear.addEventListener('click', ()=>{
+  computation.clear()
 })

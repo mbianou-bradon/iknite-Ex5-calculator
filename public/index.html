@@ -16,8 +16,8 @@
                 <div id="current-operation"  class="current-operant text-4xl break-words"></div>
             </div>
 
-            <div class="flex items-center justify-center md:gap-1 md:px-3">
-                <div class="special-operations grid grid-cols-2 py-5 text-sm">
+            <div class="grid grid-cols-12 m-2 gap-1 grid-rows-5">
+                <div class="special-operations col-span-3 row-span-5 grid grid-cols-2 py-5 text-sm">
 
                     <button>sin</button>
                     <button>ln</button>
@@ -32,7 +32,7 @@
 
                 </div>
 
-                <div class="number grid grid-cols-3 grid-rows-4 md:text-2xl">
+                <div class="number col-span-6 row-span-5 grid grid-cols-3 grid-rows-4 md:text-2xl">
 
                     <button data-number>7</button>
                     <button data-number>8</button>
@@ -49,15 +49,15 @@
 
                 </div>
 
-                <div class="basic-operations grid grid-cols-2 grid-rows-4 text-lg">
-
+                <div class="basic-operations col-span-3 row-span-5 grid grid-cols-2 grid-rows-5 text-lg">
+                    <button id="clear" class="col-span-2 bg-white">Clear</button>
                     <button data-operation="/">÷</button>
-                    <button>(</button>
                     <button data-operation="*">x</button>
-                    <button>)</button>
                     <button data-operation="-">-</button>
                     <button data-operation="+">+</button>
-                    <button id="equal" class="col-span-2 row-start-4 row-end-4 bg-red-600">=</button>
+                    <button>(</button>
+                    <button>)</button>
+                    <button id="equal" class="col-span-2 row-start-5 row-end-5 bg-red-600">=</button>
                 </div>
             </div>
         </div>

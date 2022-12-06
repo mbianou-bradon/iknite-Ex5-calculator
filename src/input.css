@@ -2,16 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-button {
-    @apply px-3 py-2 md:px-8 md:py-5 hover:bg-slate-900 rounded-lg;
+.number button {
+    @apply px-3 py-2 md:px-5 md:py-4 hover:bg-slate-900 rounded-lg;
+}
+
+
+.basic-operations button {
+    @apply px-3 py-2 md:px-5 md:py-4 hover:bg-slate-900 rounded-lg;
 }
 
 .special-operations button {
  
-    @apply px-2 py-2 md:px-8 md:py-4 hover:bg-slate-900 rounded-lg;
+    @apply px-2 py-2 md:px-5 md:py-2 hover:bg-slate-900 rounded-lg;
 }
 
 
 #equal {
-    @apply text-white
+    @apply px-2 py-2 md:px-8 md:py-3 text-white hover:bg-slate-900 rounded-lg;
 }
