@@ -7,17 +7,22 @@
     <link rel="stylesheet" href="./main.css">
     <title>Calculator</title>
 </head>
-<body class="container mx-auto bg-slate-400">
-    <main class="flex justify-center items-center h-[100vh] ">
-        <div class="bg-black text-[#3651c4] place-self-center w-full md:max-w-xl  font-extrabold rounded-3xl overflow-hidden">
+<body class="container mx-auto bg-slate-400 text-[#3651c4]">
+    <main class="max-w-3xl md:mx-auto px-4 pb-2 select-none">
 
-            <div class="output flex flex-col items-end justify-around h-20 p-3 gap-2 bg-slate-900 break-words overflow-hidden">
-                <div id="previous-operation" class="previous-operant font-semibold"></div>
-                <div id="current-operation"  class="current-operant text-4xl break-words"></div>
-            </div>
+        <div class="w-full rounded-3xl bg-white text-center p-5 mt-4">IKCalculator</div>
 
-            <div class="grid grid-cols-12 m-2 gap-1 grid-rows-5">
-                <div class="special-operations col-span-3 row-span-5 grid grid-cols-2 py-5 text-sm">
+        <div class="output flex flex-col md:mt-5 md:mb-10 mt-20 items-end justify-around w-full md:p-7 p-2 gap-2 bg-slate-900 break-words overflow-hidden md:rounded-3xl rounded-t-3xl">
+            <div id="previous-operation" class="previous-operant font-semibold"></div>
+            <div id="current-operation"  class="current-operant text-4xl font-semibold break-words"></div>
+        </div>
+
+        <div class="bg-black w-full font-extrabold md:rounded-3xl rounded-b-3xl p-3 overflow-hidden">
+
+           
+
+            <div class="grid grid-cols-12 m-2 gap-1">
+                <div class="special-operations col-span-3 row-span-5 md:grid grid-cols-2 py-5 text-sm hidden">
 
                     <button>sin</button>
                     <button>ln</button>
@@ -32,7 +37,7 @@
 
                 </div>
 
-                <div class="number col-span-6 row-span-5 grid grid-cols-3 grid-rows-4 md:text-2xl">
+                <div class="number col-span-9 md:col-span-6 grid grid-cols-3 grid-rows-4 md:text-2xl">
 
                     <button data-number>7</button>
                     <button data-number>8</button>
@@ -49,14 +54,14 @@
 
                 </div>
 
-                <div class="basic-operations col-span-3 row-span-5 grid grid-cols-2 grid-rows-5 text-lg">
+                <div class="basic-operations col-span-3 grid grid-cols-2 grid-rows-5 text-lg">
                     <button id="clear" class="col-span-2 text-white bg-red-600">Clear</button>
                     <button data-operation="/">÷</button>
                     <button data-operation="*">x</button>
                     <button data-operation="-">-</button>
                     <button data-operation="+">+</button>
-                    <button>(</button>
-                    <button>)</button>
+                    <button data-bracket>(</button>
+                    <button data-bracket>)</button>
                     <button id="equal" class="col-span-2 row-start-5 row-end-5 bg-white">=</button>
                 </div>
             </div>

@@ -48,10 +48,11 @@ class Computation {
 
 
 const numbers = document.querySelectorAll('[data-number]')
+const operation = document.querySelectorAll('[data-operation]')
+const bracket = document.querySelectorAll('[data-bracket]')
 const deleteButton = document.getElementById('delete')
 const equal = document.getElementById('equal')
 const clear = document.getElementById('clear')
-const operation = document.querySelectorAll('[data-operation]')
 const previousOperation = document.getElementById('previous-operation')
 const currentOperation= document.getElementById('current-operation')
 
@@ -91,4 +92,11 @@ equal.addEventListener('click', ()=>{
 
 clear.addEventListener('click', ()=>{
   computation.clear()
+})
+
+bracket.forEach(button => {
+  button.addEventListener('click', ()=>{
+    let brackets = button.innerText
+    computation.updateDisplay(brackets)
+  })
 })
