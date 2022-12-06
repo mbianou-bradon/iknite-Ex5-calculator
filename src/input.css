@@ -18,5 +18,5 @@
 
 
 #equal {
-    @apply px-2 py-2 md:px-8 md:py-3 text-white hover:bg-slate-900 rounded-lg;
+    @apply px-2 py-2 md:px-8 md:py-3 hover:bg-slate-900 rounded-lg;
 }
