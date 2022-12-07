@@ -31,15 +31,37 @@ class Computation {
   result(){
     let result = previousOperation.innerText.split('')
     let cleanResult = result.map(number => {
-        if (number === 'x'){
-          return '*'
-        }
-        if(number === '÷') return '/'
-        else return number;    
+      switch(number){
+        case 'x':
+          number === '*'
+          break;
+        
+        case '÷':
+          number === '/'
+          break;
+
+        case 'π':
+          number === '3.14'
+          break;
+
+        case '^':
+          number === '**('
+          break;
+
+        default:
+          number === number
+          break;
+      }
+     //   if (number === 'x'){
+       //   return '*'
+       // }
+       // if(number === '÷') return '/'
+        // if (number=== 'π') return '3.14'
+        // else return number;    
         
     });
     result = cleanResult.join('')
-    //console.log(eval(result))
+    console.log(eval(result))
     currentOperation.innerText = eval(result)
   }
     
@@ -50,6 +72,7 @@ class Computation {
 const numbers = document.querySelectorAll('[data-number]')
 const operation = document.querySelectorAll('[data-operation]')
 const bracket = document.querySelectorAll('[data-bracket]')
+const specialOperation = document.querySelectorAll('[data-special-operation]')
 const deleteButton = document.getElementById('delete')
 const equal = document.getElementById('equal')
 const clear = document.getElementById('clear')
@@ -98,5 +121,12 @@ bracket.forEach(button => {
   button.addEventListener('click', ()=>{
     let brackets = button.innerText
     computation.updateDisplay(brackets)
+  })
+})
+
+specialOperation.forEach(button => {
+  button.addEventListener('click', ()=>{
+    let special = button.innerText
+    computation.updateDisplay(special)
   })
 })
