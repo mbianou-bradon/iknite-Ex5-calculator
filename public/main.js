@@ -31,28 +31,34 @@ class Computation {
   result(){
     let result = previousOperation.innerText.split('')
     let cleanResult = result.map(number => {
-      switch(number){
-        case 'x':
-          number === '*'
-          break;
+      // switch(number){
+      //   case 'x':
+      //     number === '*'
+      //     break;
         
-        case '÷':
-          number === '/'
-          break;
+      //   case '÷':
+      //     number === '/'
+      //     break;
 
-        case 'π':
-          number === '3.14'
-          break;
+      //   case 'π':
+      //     number === '3.14'
+      //     break;
 
-        case '^':
-          number === '**('
-          break;
+      //   case '^':
+      //     number === '**('
+      //     break;
 
-        default:
-          number === number
-          break;
-      }
+      //   default:
+      //     number === number
+      //     break;
+      // }
       
+       if (number === 'x'){
+         return '*'
+       }
+       if(number === '÷') return '/'
+        if (number=== 'π') return '3.14'
+        else return number;    
         
     });
     result = cleanResult.join('')
