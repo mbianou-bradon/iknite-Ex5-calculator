@@ -52,12 +52,7 @@ class Computation {
           number === number
           break;
       }
-     //   if (number === 'x'){
-       //   return '*'
-       // }
-       // if(number === '÷') return '/'
-        // if (number=== 'π') return '3.14'
-        // else return number;    
+      
         
     });
     result = cleanResult.join('')
