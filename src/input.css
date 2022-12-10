@@ -2,18 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.number button {
+button {
     @apply px-3 py-2 md:px-5 md:py-4 hover:bg-slate-900 rounded-lg;
-}
-
-
-.basic-operations button {
-    @apply px-3 py-2 md:px-5 md:py-4 hover:bg-slate-900 rounded-lg;
-}
-
-.special-operations button {
- 
-    @apply px-2 py-2 md:px-5 md:py-2 hover:bg-slate-900 rounded-lg;
 }
 
 

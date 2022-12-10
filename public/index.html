@@ -8,9 +8,9 @@
     <title>IKCalculator</title>
 </head>
 <body class="container mx-auto bg-slate-400 text-[#3651c4]">
-    <main class="max-w-3xl md:mx-auto px-4 pb-2 select-none">
+    <main class="max-w-2xl md:max-w-3xl mx-auto select-none">
 
-        <div class="w-full rounded-3xl bg-white text-xl text-center font-semibold p-5 mt-20 md:mt-4">IKCalculator</div>
+       <!-- <div class="w-full rounded-3xl bg-white text-xl text-center font-semibold p-5 mt-20 md:mt-4">IKCalculator</div>
 
         <div class="output flex flex-col md:mt-5 md:mb-10 mt-20 items-end justify-around w-full md:p-7 p-2 gap-2 bg-slate-900 break-words overflow-hidden md:rounded-3xl rounded-t-3xl">
             <div id="previous-operation" class="font-semibold"></div>
@@ -21,23 +21,17 @@
 
            
 
-            <div class="grid grid-cols-12 m-2 gap-1">
-                <div class="special-operations col-span-3 row-span-5 md:grid grid-cols-2 py-5 text-sm hidden">
+            <div class="grid grid-cols-12 m-2">
+                <div class="special-operations col-span-1 md:col-span-2 grid grid-cols-1 text-sm">
 
-                    <button data-special-operation>sin</button>
-                    <button data-special-operation>ln</button>
-                    <button data-special-operation>cos</button>
-                    <button data-special-operation>log</button>
-                    <button data-special-operation>tan</button>
                     <button data-special-operation>e</button>
                     <button data-special-operation>π</button>
                     <button data-special-operation>^</button>
                     <button data-special-operation>!</button>
-                    <button data-special-operation>√</button>
 
                 </div>
 
-                <div class="number col-span-9 md:col-span-6 grid grid-cols-3 grid-rows-4 md:text-2xl">
+                <div class="number col-span-9 md:col-span-6 grid grid-cols-3 grid-rows-4 text-2xl">
 
                     <button data-number>7</button>
                     <button data-number>8</button>
@@ -54,22 +48,89 @@
 
                 </div>
 
-                <div class="basic-operations col-span-3 grid grid-cols-2 grid-rows-5 text-lg">
-                    <button id="clear" class="col-span-2 text-sm md:text-[16px] text-white bg-red-600">Clear</button>
+                <div class="basic-operations col-span-2 md:col-span-4 grid grid-cols-2 md:grid-cols-3 text-lg">
+                    <button id="clear" class="col-span-3 text-sm md:text-[16px] text-white bg-red-600">Clear</button>
                     <button data-operation="/">÷</button>
                     <button data-operation="*">x</button>
                     <button data-operation="-">-</button>
                     <button data-operation="+">+</button>
                     <button data-bracket>(</button>
                     <button data-bracket>)</button>
-                    <button id="equal" class="col-span-2 row-start-5 row-end-5 bg-white">=</button>
+                    <button id="equal" class="col-span-3 row-start-5 row-end-5 bg-white">=</button>
                 </div>
             </div>
+        </div> -->
+    
+
+
+
+        <div class="flex flex-col items-center justify-around gap-10 md:gap-5 font-bold max-w-3xl h-auto mx-2 md:mx-0">
+            <div class="bg-white rounded-full text-center px-32 py-4 mt-5 hidden md:block">IKCalculator</div>
+            <div class="w-full h-40 bg-white rounded-lg mt-5 md:mt-0 flex flex-col justify-evenly items-end pr-2">
+                <div id="previous-operation">
+
+                </div>
+
+                <div id="current-operation"  class=" text-3xl md:text-4xl font-semibold" >
+
+                </div>
+            </div>
+
+            <div class="bg-white text-2xl w-full md:max-w-screen-md p-1 rounded-lg">
+
+                <div class="flex justify-between items-center my-5">
+                        <button id="clear" class="text-white bg-red-600">Clear</button>
+                        <button id="delete" class="border border-black text-black">DEL</button>
+                </div>
+
+                <div class="grid grid-cols-12">
+
+                    <div class="special-operations col-span-2 flex flex-col [&>*]:py-5 [&>*]:px-6 gap-2">
+
+                        <button data-special-operation>e</button>
+                        <button data-special-operation>π</button>
+                        <button data-special-operation>^</button>
+                        <button data-special-operation>!</button>
+
+                    </div>
+                    
+                    <div class="number col-span-7 grid grid-cols-3 [&>*]:py-5 [&>*]:px-6 gap-2">
+
+                        <button data-number>7</button>
+                        <button data-number>8</button>
+                        <button data-number>9</button>
+                        <button data-number>4</button>
+                        <button data-number>5</button>
+                        <button data-number>6</button>
+                        <button data-number>1</button>
+                        <button data-number>2</button>
+                        <button data-number>3</button>
+                        <button data-number>0</button>
+                        <button data-number>00</button>
+                        <button data-number>.</button>
+                    
+
+                    </div>
+
+                    <div class="basic-operations col-span-3 grid grid-cols-2 [&>*]:py-5 [&>*]:px-6 gap-2">
+                    
+                        <button data-operation="/">÷</button>
+                        <button data-operation="*">x</button>
+                        <button data-operation="-">-</button>
+                        <button data-operation="+">+</button>
+                        <button data-bracket>(</button>
+                        <button data-bracket>)</button>
+                        <button id="equal" class="col-span-2 bg-[#3651c4] text-white">=</button>
+                    </div>
+
+                </div>
+            </div>
+
+
         </div>
+
+
     </main>
-
-
-
 
     <script src="./main.js"></script>
 </body>
