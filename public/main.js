@@ -58,7 +58,7 @@ class Computation {
        }
        if(number === '÷') return '/'
        if (number === '^') return '**'
-       if (number === 'e') return '2.718'
+       if (number === 'e') return '2.71828182'
         if (number=== 'π') return '3.14'
         else return number;    
         
